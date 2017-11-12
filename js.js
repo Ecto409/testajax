@@ -3,7 +3,7 @@ $.ajax({
   //  type: "GET",
   //  crossDomain: true,
   dataType: "jsonp", // jsonp
-  url: 'http://wikidata.org/w/api.php?action=wbgetentities&sites=frwiki&titles=France&languages=zh-hans|zh-hant|fr&props=sitelinks|labels|aliases|descriptions&format=json',
+  url: 'https://wikidata.org/w/api.php?action=wbgetentities&sites=frwiki&titles=France&languages=zh-hans|zh-hant|fr&props=sitelinks|labels|aliases|descriptions&format=json',
   //  data: data,
   //  success: 1,
 }).done(function(data) {
@@ -24,7 +24,7 @@ $.ajax({
   //  type: "GET",
   //  crossDomain: true,
   dataType: "json", // json
-  url: 'http://wikidata.org/w/api.php?action=wbgetentities&sites=frwiki&titles=France&languages=zh-hans|zh-hant|fr&props=sitelinks|labels|aliases|descriptions&format=json&callback=?', // '&callback=?
+  url: 'https://wikidata.org/w/api.php?action=wbgetentities&sites=frwiki&titles=France&languages=zh-hans|zh-hant|fr&props=sitelinks|labels|aliases|descriptions&format=json&callback=?', // '&callback=?
   //  data: data,
   //  success: 1,
 }).done(function(data) {
@@ -41,7 +41,7 @@ $.ajax({
 });
 
 // Solution 3: $.getJSON() & calback=?:
-$.getJSON('http://wikidata.org/w/api.php?action=wbgetentities&sites=frwiki&titles=France&languages=zh-hans|zh-hant|fr&props=sitelinks|labels|aliases|descriptions&format=json&callback=?', function(data) {
+$.getJSON('https://wikidata.org/w/api.php?action=wbgetentities&sites=frwiki&titles=France&languages=zh-hans|zh-hant|fr&props=sitelinks|labels|aliases|descriptions&format=json&callback=?', function(data) {
   var items = [];
 
   $.each(data.entities.Q142.labels.fr, function(key, val) {
